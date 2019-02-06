@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity
 
     private TextView actionStatus;
 
-    private com.projects.alshell.vokaturiandroid.PlayPauseButton playPauseButton;
+    private PlayPauseButton playPauseButton;
 
     private Vokaturi vokaturiApi;
 
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity
         progressBarSadness = (ProgressBar) findViewById(R.id.progressBarSadness);
         progressBarAnger = (ProgressBar) findViewById(R.id.progressBarAnger);
         progressBarFear = (ProgressBar) findViewById(R.id.progressBarFear);
-        playPauseButton = (com.projects.alshell.vokaturiandroid.PlayPauseButton) findViewById(R.id.playPauseButton);
+        playPauseButton = (PlayPauseButton) findViewById(R.id.playPauseButton);
 
         textViewNeutrality = (TextView) findViewById(R.id.textViewNeutrality);
         textViewHappiness = (TextView) findViewById(R.id.textViewHappiness);
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity
 
     private void setListeners()
     {
-        playPauseButton.setOnControlStatusChangeListener(new com.projects.alshell.vokaturiandroid.PlayPauseButton.OnControlStatusChangeListener()
+        playPauseButton.setOnControlStatusChangeListener(new PlayPauseButton.OnControlStatusChangeListener()
         {
             @Override
             public void onStatusChange(View view, boolean state)
